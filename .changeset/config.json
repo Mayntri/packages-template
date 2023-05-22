@@ -5,7 +5,7 @@
     { "repo": "Mayntri/packages-template" }
   ],
   "commit": false,
-  "fixed": [["@Mayntri/example"]],
+  "fixed": [["@mayntri/example"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
