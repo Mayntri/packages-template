@@ -25,8 +25,8 @@ try {
           `"@mayntri/*": "${newVersion}"`
         )
         .replace(
-          new RegExp(`"jortkuhlmann": "${oldVersion}"`, "g"),
-          `"jortkuhlmann": "${newVersion}"`
+          new RegExp(`"mayntri": "${oldVersion}"`, "g"),
+          `"mayntri": "${newVersion}"`
         );
 
       fs.writeFileSync(pkgJsonPath, newContent);

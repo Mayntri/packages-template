@@ -49,9 +49,8 @@ jobs:
 
       - name: Authenticate to npm and publish
         run: |
-          pnpm build --filter @mayntri/react --filter jortkuhlmann
+          pnpm build --filter @mayntri/example --filter example
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-          pnpm publish packages/jortkuhlmann --access public --tag canary --no-git-checks
           pnpm publish packages/example --access public --tag canary --no-git-checks
 
       - name: Create a new comment notifying of the new canary version
@@ -72,13 +71,7 @@ jobs:
               body: `A new canary is available for testing. You can install this latest build in your project with:
 
               \`\`\`sh
-              pnpm add jortkuhlmann@${version}
-              \`\`\`
-
-              or, if you're using React:
-
-              \`\`\`sh
-              pnpm add jortkuhlmann@${version} @mayntri/react@${version}
+              pnpm add @mayntri/example@${version}
               \`\`\`
               `,
             })
