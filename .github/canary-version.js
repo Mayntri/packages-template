@@ -21,8 +21,8 @@ try {
       const content = JSON.stringify(pkg, null, "\t") + "\n";
       const newContent = content
         .replace(
-          new RegExp(`"@jortkuhlmann/\\*": "${oldVersion}"`, "g"),
-          `"@jortkuhlmann/*": "${newVersion}"`
+          new RegExp(`"@mayntri/\\*": "${oldVersion}"`, "g"),
+          `"@mayntri/*": "${newVersion}"`
         )
         .replace(
           new RegExp(`"jortkuhlmann": "${oldVersion}"`, "g"),

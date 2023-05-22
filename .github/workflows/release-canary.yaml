@@ -49,7 +49,7 @@ jobs:
 
       - name: Authenticate to npm and publish
         run: |
-          pnpm build --filter @jortkuhlmann/react --filter jortkuhlmann
+          pnpm build --filter @mayntri/react --filter jortkuhlmann
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
           pnpm publish packages/jortkuhlmann --access public --tag canary --no-git-checks
           pnpm publish packages/example --access public --tag canary --no-git-checks
@@ -78,7 +78,7 @@ jobs:
               or, if you're using React:
 
               \`\`\`sh
-              pnpm add jortkuhlmann@${version} @jortkuhlmann/react@${version}
+              pnpm add jortkuhlmann@${version} @mayntri/react@${version}
               \`\`\`
               `,
             })
