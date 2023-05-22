@@ -1,0 +1,5 @@
+---
+"@mayntri/example": patch
+---
+
+test
