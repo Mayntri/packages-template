@@ -1,10 +1,7 @@
 import fs from "fs";
 import { exec } from "child_process";
 
-const pkgJsonPaths = [
-  "packages/uploadthing/package.json",
-  "packages/react/package.json",
-];
+const pkgJsonPaths = ["packages/example/package.json"];
 try {
   exec("git rev-parse --short HEAD", (err, stdout) => {
     if (err) {
@@ -24,12 +21,12 @@ try {
       const content = JSON.stringify(pkg, null, "\t") + "\n";
       const newContent = content
         .replace(
-          new RegExp(`"@uploadthing/\\*": "${oldVersion}"`, "g"),
-          `"@uploadthing/*": "${newVersion}"`
+          new RegExp(`"@jortkuhlmann/\\*": "${oldVersion}"`, "g"),
+          `"@jortkuhlmann/*": "${newVersion}"`
         )
         .replace(
-          new RegExp(`"uploadthing": "${oldVersion}"`, "g"),
-          `"uploadthing": "${newVersion}"`
+          new RegExp(`"jortkuhlmann": "${oldVersion}"`, "g"),
+          `"jortkuhlmann": "${newVersion}"`
         );
 
       fs.writeFileSync(pkgJsonPath, newContent);

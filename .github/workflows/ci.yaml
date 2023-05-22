@@ -12,8 +12,6 @@ env:
   DATABASE_NAME: "fake"
   DATABASE_USERNAME: "fake"
   DATABASE_PASSWORD: "fake"
-  DB_PUSH_URL: "fake"
-  PING_SIGNING_SECRET: "fake"
 
 jobs:
   build:
