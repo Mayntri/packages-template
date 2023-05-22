@@ -23,7 +23,7 @@
     "dotenv": "latest",
     "prettier": "latest",
     "turbo": "^1.9.3",
-    "typescript": "5.1.0-beta"
+    "typescript": "^5.0.4"
   },
   "packageManager": "pnpm@7.27.0"
 }
