@@ -1,3 +1,8 @@
 export const Example = () => {
-  return <div className="text-lg">Example 2</div>;
+  return (
+    <div>
+      <div className="text-lg">Example 1</div>
+      <div className="text-lg">Example 2</div>
+    </div>
+  );
 };
